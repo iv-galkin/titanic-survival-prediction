@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+output/*.csv
+output/*.log
+!output/.gitkeep
+
+notebooks/catboost_info/

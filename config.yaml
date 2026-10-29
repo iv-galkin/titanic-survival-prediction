@@ -1,0 +1,40 @@
+data:
+  train_path: input_files/train.csv
+  test_path: input_files/test.csv
+  submission_path: output/submission.csv
+
+features:
+  numeric:
+    - Age
+    - Fare
+    - SibSp
+    - Parch
+    - HasCabin
+  categorical:
+    - Sex
+    - Pclass
+    - Title
+    - Embarked
+    - FamilyGroup
+
+target: Survived
+
+model:
+  name: xgboost
+  params:
+    n_estimators: 516
+    max_depth: 7
+    min_child_weight: 6.014435154132807
+    learning_rate: 0.07740750704748588
+    subsample: 0.712096521064806
+    random_state: 42
+    eval_metric: logloss
+    enable_categorical: true
+
+validation:
+  run_cv: true
+  n_splits: 5
+  random_state: 42
+  shuffle: true
+  scoring: accuracy
+  n_jobs: -1
