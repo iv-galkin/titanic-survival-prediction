@@ -7,3 +7,4 @@ output/*.log
 !output/.gitkeep
 
 notebooks/catboost_info/
+catboost_info/
